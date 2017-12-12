@@ -16,7 +16,8 @@ Fast installation of laravel, laradock and all dependencies on the server.
 <h2>Project set up</h2>
 <ul>
   <li><code>composer install</code></li>
-  <li><code>chmod -R 777 storage/</code></li>
+  <li><code>sudo chgrp -R www-data storage bootstrap/cache</code></li>
+  <li><code>sudo chmod -R ug+rwx storage bootstrap/cache</code></li>
   <li><code>npm install</code> </li>
   <li><code>php artisan migrate</code></li>
   <li><code>php artisan db:seed</code> </li>
@@ -28,5 +29,3 @@ Fast installation of laravel, laradock and all dependencies on the server.
   <li><i>guide for all laradock https://github.com/LaraDock/laradock/issues/225</i></li>
   <li><i>fix problem with mysql db and users https://github.com/laradock/laradock/issues/950</i></li>
 </ul>
-  
-
